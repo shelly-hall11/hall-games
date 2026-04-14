@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Olivia's Game — Coming Soon</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #d4f0ff 0%, #e8d4ff 100%);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+      text-align: center;
+      user-select: none;
+    }
+
+    .star {
+      font-size: 6rem;
+      animation: spin 4s linear infinite;
+      display: block;
+      margin-bottom: 24px;
+    }
+
+    @keyframes spin {
+      0%   { transform: rotate(0deg) scale(1); }
+      50%  { transform: rotate(180deg) scale(1.15); }
+      100% { transform: rotate(360deg) scale(1); }
+    }
+
+    h1 {
+      font-size: 2.8rem;
+      color: #7c3aed;
+      text-shadow: 2px 2px 0 white;
+      margin-bottom: 12px;
+    }
+
+    p {
+      font-size: 1.2rem;
+      color: #888;
+      margin-bottom: 32px;
+    }
+
+    a.back {
+      display: inline-block;
+      background: linear-gradient(135deg, #818cf8, #a855f7);
+      color: white;
+      border-radius: 999px;
+      padding: 12px 36px;
+      font-size: 1rem;
+      font-weight: 600;
+      text-decoration: none;
+      box-shadow: 0 4px 14px rgba(168,85,247,0.35);
+      transition: transform 0.15s, box-shadow 0.15s;
+    }
+
+    a.back:hover {
+      transform: scale(1.06);
+      box-shadow: 0 6px 20px rgba(168,85,247,0.5);
+    }
+  </style>
+</head>
+<body>
+
+  <span class="star">🌟</span>
+  <h1>Olivia's Game</h1>
+  <p>Something wonderful is being made just for you, Olivia!</p>
+  <a class="back" href="../index.html">← Back to Hall Games</a>
+
+</body>
+</html>

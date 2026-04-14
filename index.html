@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hall Games</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #ffd6e7 0%, #c9f0ff 100%);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+      user-select: none;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    header h1 {
+      font-size: 3.5rem;
+      color: #c94fa0;
+      text-shadow: 3px 3px 0px #fff;
+      letter-spacing: 2px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      color: #888;
+      margin-top: 8px;
+    }
+
+    .games-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 28px;
+      justify-content: center;
+      max-width: 900px;
+    }
+
+    .game-card {
+      background: white;
+      border-radius: 28px;
+      padding: 36px 40px;
+      text-align: center;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.10);
+      text-decoration: none;
+      color: inherit;
+      transition: transform 0.18s, box-shadow 0.18s;
+      width: 280px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .game-card:hover {
+      transform: translateY(-6px) scale(1.03);
+      box-shadow: 0 16px 40px rgba(201,79,160,0.18);
+    }
+
+    .game-card:active {
+      transform: scale(0.97);
+    }
+
+    .game-icon {
+      font-size: 4.5rem;
+      line-height: 1;
+    }
+
+    .game-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #c94fa0;
+    }
+
+    .game-desc {
+      font-size: 0.95rem;
+      color: #888;
+      line-height: 1.4;
+    }
+
+    .game-tag {
+      display: inline-block;
+      background: linear-gradient(135deg, #f472b6, #a855f7);
+      color: white;
+      border-radius: 999px;
+      padding: 4px 16px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+
+    .game-tag.coming-soon {
+      background: linear-gradient(135deg, #d1d5db, #9ca3af);
+    }
+
+    .game-card.disabled {
+      opacity: 0.75;
+      cursor: default;
+      pointer-events: none;
+    }
+
+    footer {
+      margin-top: 64px;
+      font-size: 0.85rem;
+      color: #bbb;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>🎮 Hall Games</h1>
+  <p>Pick a game and play!</p>
+</header>
+
+<div class="games-grid">
+
+  <a class="game-card" href="everlybot/index.html">
+    <div class="game-icon">🐱</div>
+    <div class="game-title">Everly's Cats</div>
+    <div class="game-desc">Find all the matching cats in this fun memory game!</div>
+    <span class="game-tag">Memory Game</span>
+  </a>
+
+  <a class="game-card disabled" href="oliviabot/index.html">
+    <div class="game-icon">🌟</div>
+    <div class="game-title">Olivia's Game</div>
+    <div class="game-desc">Something amazing is coming for Olivia...</div>
+    <span class="game-tag coming-soon">Coming Soon</span>
+  </a>
+
+</div>
+
+<footer>Made with love for the Hall family 💕</footer>
+
+</body>
+</html>
